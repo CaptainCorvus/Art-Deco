@@ -4,14 +4,16 @@ import datetime
 import ownership
 from prettytable import PrettyTable
 
+print 'printer'
+
 nflgame.live.current_year_and_week()
-current_week = nflgame.live._cur_week
+current_week = nflgame.live._cur_week  # Retreives week of nfl season
 
 print('Current Week: ', current_week)
 
-#year = nflgame.live._cur_year
-year = 2016
-print('Current Year : ', year)
+#year = nflgame.live._cur_year   UNCOMMENT WHEN SEASON BEGINS
+year = 2016                    # COMMENT OUT WHEN SEASON BEGINS
+print('Current Year : ' , year)
 
 
 """ this module retreives the current week of the NFL season, and builds a list including
@@ -29,6 +31,9 @@ def last_four_weeks():
     elif current_week == 1:
         week_list = current_week
         return week_list
+
+#def season_totals():
+    
 
 
 """ get the games and players for the last four weeks, with their max stats combined """

@@ -35,7 +35,7 @@ allPlayersOwnership = []
 
 # this outer while loop will iterate through the pages at nfl.com by modifying 
 # the url by some multiple of 25
-while offset < 26:
+while offset < 202:
 
     # long ass url will start at offset = 1 and increment by 25 each iteration
     nfl_url =  'http://fantasy.nfl.com/research/trends?offset=%d&position=O&sort=percentOwned&statCategory=research&statSeason=2017&statType=weekResearchStats&statWeek=1' % offset
