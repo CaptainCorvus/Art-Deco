@@ -99,10 +99,10 @@ def build_receiver_table():
     print('TOP RECEIVERS FOR WEEKS: ', week)
     print(x)
  
-build_rusher_table()
-print('**********************************')
-print('**********beep*boop*beep**********')   
-print('**********************************')
-build_receiver_table()
+#build_rusher_table()
+#print('**********************************')
+#print('**********beep*boop*beep**********')   
+#print('**********************************')
+#build_receiver_table()
 
 
