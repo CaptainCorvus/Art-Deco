@@ -8,6 +8,19 @@ current_week = nflgame.live._cur_week
 current_year = 2017
 
 # get a list of the last four weeks of the season
-last_four_weeks = nftesting.last_four_weeks()
+weeks = nftesting.last_four_weeks()
 
-print(last_four_weeks)
+print(weeks)
+
+var = nftesting.rec_stats()
+
+for element in var:
+    print element[0], element[1]
+
+var1 = ownership.build_name_ownership()
+
+print len(var1)
+
+for i in var1: 
+    print i.getOwned()
+    print i.getName()
