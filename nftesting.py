@@ -6,16 +6,15 @@ import datetime
 import ownership
 from prettytable import PrettyTable
 
-print 'printer'
 
 nflgame.live.current_year_and_week()
 current_week = nflgame.live._cur_week  # Retreives week of nfl season
 
-print('Current Week: ', current_week)
+#print('Current Week: ', current_week)
 
 #year = nflgame.live._cur_year   UNCOMMENT WHEN SEASON BEGINS
-year = 2016                    # COMMENT OUT WHEN SEASON BEGINS
-print('Current Year : ' , year)
+year = 2017                    # COMMENT OUT WHEN SEASON BEGINS
+#print('Current Year : ' , year)
 
 
 """ this module retreives the current week of the NFL season, and builds a list including
@@ -40,7 +39,7 @@ def last_four_weeks():
 
 """ get the games and players for the last four weeks, with their max stats combined """
 week = last_four_weeks()
-games = nflgame.games(year, week)
+games = nflgame.games(year, kind='PRE')
 players = nflgame.combine_max_stats(games)
 
 """ these are the lists that hold receiver statistics """
@@ -61,7 +60,6 @@ rush_rec_tds_list = []
 """ loop through to append appropriate receiver list using nflgame. zip, just in case """
 def rec_stats():
     for p in players.receiving().sort("receiving_yds").limit(20):
-        print p
         receiver_list.append(str(p))
         rec_rec_list.append(p.receiving_rec)
         rec_yrd_list.append(p.receiving_yds)
@@ -69,6 +67,7 @@ def rec_stats():
 
     zippy = zip(receiver_list, rec_rec_list, rec_yrd_list, rec_tds_list)
     #print zippy
+    return zippy
 
 """ loop through to append appropriate rusher list using nflgame. zip, just in case """
 
@@ -80,6 +79,7 @@ def rusher_stats():
         rush_tds_list.append(p.rushing_tds)
     zippy = zip(rusher_list, rush_att_list, rush_yrd_list, rush_tds_list)
     #print zippy
+    return zippy
 
 """ run the rusher/receiver stat modules """
 rusher_stats()

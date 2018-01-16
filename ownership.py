@@ -62,7 +62,8 @@ while offset < 26:
 # percent ownership from the html. player name is the only string
 # in the first a tag. percent ownership is the only string in the 3rd
 # td tag sibling
-def build_player_name (  ):
+def build_name_ownership():
+    hotlist = []
     for duck in allplayers:
         
         # player name is only string in first </a> tag of html (in 'tbody')
@@ -79,14 +80,20 @@ def build_player_name (  ):
 
         # keep player objects in an array. 
         allPlayersOwnership.append(p) 
+        hotlist.append(p)
+    return hotlist
 
 
-build_player_name()
+var = build_name_ownership()
+print len(var)
+
+#for i in var:
+
 
 # more for testing, but print the Player objects/attributes
-for goose in allPlayersOwnership:
-    num = goose.getOwned()
-    print goose.getName(), num
+#for goose in allPlayersOwnership:
+#    num = goose.getOwned()
+#    print goose.getName(), num
 
 #print allPlayersOwnership
 

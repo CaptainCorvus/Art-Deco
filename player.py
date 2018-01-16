@@ -22,11 +22,7 @@ class Receiver:
         self.tds = tds
         self.owned = owned
 
-<<<<<<< HEAD
-    def set_owned( owned ):
 
-=======
->>>>>>> c52cdf96ce65ca0bdd66a694a4a7d6b3ec220075
 class Rushers: 
     def __init__(self, name, ru_yards, receptions, re_yards, tds, owned):
         self.name = name
